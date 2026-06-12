@@ -1,0 +1,34 @@
+/**
+ * Editor Styles for the FAQ Schema Block.
+ *
+ * Provides clear visual boundaries and styling within the Gutenberg editor
+ * to improve the authoring experience.
+ *
+ * @since 1.0.0
+ */
+.wp-block-seo-faq-accordion-wrapper {
+	border: 1px dashed #ccc;
+	padding: 1rem;
+	background: #f8fafc;
+}
+
+.seo-faq-icon-setting {
+	border: 1px solid #e2e8f0;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background: #fff;
+	border-radius: 4px;
+
+	.faq-question-text {
+		font-weight: 600;
+		font-size: 1.125rem;
+		margin-bottom: 0.5rem;
+		border-bottom: 1px solid #edf2f7;
+		padding-bottom: 0.5rem;
+	}
+
+	.faq-answer-text {
+		color: #4a5568;
+		min-height: 50px;
+	}
+}

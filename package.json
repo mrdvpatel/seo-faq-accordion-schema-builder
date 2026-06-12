@@ -1,0 +1,13 @@
+{
+  "name": "seo-faq-accordion-schema-builder",
+  "version": "1.0.0",
+  "description": "FAQ Gutenberg Block with JSON-LD Schema",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.9.0"
+  }
+}

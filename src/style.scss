@@ -1,0 +1,69 @@
+/**
+ * Frontend Styles for the FAQ Schema Block.
+ *
+ * Handles the display of the accordion functionality using native HTML details/summary
+ * as well as the 'Always Expanded' mode overrides.
+ *
+ * @since 1.0.0
+ */
+.seo-faq-accordion-wrapper {
+	margin-bottom: 2rem;
+
+	.seo-faq-item {
+		border-bottom: 1px solid #e2e8f0;
+		padding: 1rem 0;
+
+		.seo-faq-question {
+			font-weight: 600;
+			font-size: 1.125rem;
+			cursor: pointer;
+			list-style: none;
+			position: relative;
+			padding-right: 2rem;
+
+			&::marker, &::-webkit-details-marker {
+				display: none;
+				content: '';
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 1.25rem;
+				height: 1.25rem;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				/* Default expand icon (plus sign) */
+				background-image: var(--faq-expand-icon, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>'));
+				transition: transform 0.3s ease;
+			}
+		}
+
+		&[open] .seo-faq-question::after {
+			/* Default collapse icon (minus sign) */
+			background-image: var(--faq-collapse-icon, var(--faq-expand-icon, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>')));
+			transform: translateY(-50%);
+		}
+
+		.seo-faq-answer {
+			margin-top: 1rem;
+			color: #4a5568;
+			line-height: 1.6;
+		}
+	}
+
+	&.display-mode-expanded {
+		.seo-faq-item {
+			.seo-faq-question {
+				cursor: default;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}

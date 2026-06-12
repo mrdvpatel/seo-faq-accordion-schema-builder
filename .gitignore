@@ -1,0 +1,15 @@
+# Node.js dependencies
+node_modules/
+
+# Built ZIP files
+*.zip
+faq-schema-block.zip
+temp-zip/
+faq-schema-block-release/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Note: We are deliberately NOT ignoring the `build/` directory 
+# so that if someone downloads the plugin from GitHub, it works immediately.
