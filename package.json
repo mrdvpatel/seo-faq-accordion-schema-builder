@@ -1,5 +1,5 @@
 {
-  "name": "seo-faq-accordion-schema-builder",
+  "name": "dv-faq-schema-block",
   "version": "1.0.0",
   "description": "FAQ Gutenberg Block with JSON-LD Schema",
   "main": "build/index.js",

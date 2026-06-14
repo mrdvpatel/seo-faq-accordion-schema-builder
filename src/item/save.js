@@ -16,18 +16,18 @@ export default function save( { attributes } ) {
 	const { question, answer } = attributes;
 
 	return (
-		<details { ...useBlockProps.save( { className: 'seo-faq-item' } ) }>
-			<summary className="seo-faq-question">
+		<details { ...useBlockProps.save( { className: 'dv-faq-item' } ) }>
+			<summary className="dv-faq-question">
 				<RichText.Content
 					tagName="span"
-					className="seo-faq-question-text"
+					className="dv-faq-question-text"
 					value={ question }
 				/>
 			</summary>
-			<div className="seo-faq-answer">
+			<div className="dv-faq-answer">
 				<RichText.Content
 					tagName="div"
-					className="seo-faq-answer-text"
+					className="dv-faq-answer-text"
 					value={ answer }
 				/>
 			</div>

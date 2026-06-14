@@ -15,7 +15,7 @@ export default function save( { attributes } ) {
 	const { displayMode, expandIconUrl, collapseIconUrl } = attributes;
 	
 	const blockProps = useBlockProps.save( {
-		className: `seo-faq-accordion-wrapper display-mode-${displayMode}`,
+		className: `dv-faq-accordion-wrapper display-mode-${displayMode}`,
 		style: {
 			'--faq-expand-icon': expandIconUrl ? `url(${expandIconUrl})` : undefined,
 			'--faq-collapse-icon': collapseIconUrl ? `url(${collapseIconUrl})` : undefined,

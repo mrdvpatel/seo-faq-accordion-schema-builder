@@ -17,24 +17,24 @@ export default function Edit( { attributes, setAttributes } ) {
 	const { question, answer } = attributes;
 
 	return (
-		<div { ...useBlockProps( { className: 'seo-faq-item' } ) }>
-			<div className="seo-faq-question">
+		<div { ...useBlockProps( { className: 'dv-faq-item' } ) }>
+			<div className="dv-faq-question">
 				<RichText
 					tagName="span"
-					className="seo-faq-question-text"
+					className="dv-faq-question-text"
 					value={ question }
 					onChange={ ( value ) => setAttributes( { question: value } ) }
-					placeholder={ __( 'Enter your question here...', 'seo-faq-accordion-schema-builder' ) }
+					placeholder={ __( 'Enter your question here...', 'dv-faq-schema-block' ) }
 					allowedFormats={ [ 'core/bold', 'core/italic' ] }
 				/>
 			</div>
-			<div className="seo-faq-answer">
+			<div className="dv-faq-answer">
 				<RichText
 					tagName="div"
-					className="seo-faq-answer-text"
+					className="dv-faq-answer-text"
 					value={ answer }
 					onChange={ ( value ) => setAttributes( { answer: value } ) }
-					placeholder={ __( 'Enter your answer here...', 'seo-faq-accordion-schema-builder' ) }
+					placeholder={ __( 'Enter your answer here...', 'dv-faq-schema-block' ) }
 					allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
 				/>
 			</div>

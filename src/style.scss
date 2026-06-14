@@ -6,14 +6,14 @@
  *
  * @since 1.0.0
  */
-.seo-faq-accordion-wrapper {
+.dv-faq-accordion-wrapper {
 	margin-bottom: 2rem;
 
-	.seo-faq-item {
+	.dv-faq-item {
 		border-bottom: 1px solid #e2e8f0;
 		padding: 1rem 0;
 
-		.seo-faq-question {
+		.dv-faq-question {
 			font-weight: 600;
 			font-size: 1.125rem;
 			cursor: pointer;
@@ -43,13 +43,13 @@
 			}
 		}
 
-		&[open] .seo-faq-question::after {
+		&[open] .dv-faq-question::after {
 			/* Default collapse icon (minus sign) */
 			background-image: var(--faq-collapse-icon, var(--faq-expand-icon, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>')));
 			transform: translateY(-50%);
 		}
 
-		.seo-faq-answer {
+		.dv-faq-answer {
 			margin-top: 1rem;
 			color: #4a5568;
 			line-height: 1.6;
@@ -57,8 +57,8 @@
 	}
 
 	&.display-mode-expanded {
-		.seo-faq-item {
-			.seo-faq-question {
+		.dv-faq-item {
+			.dv-faq-question {
 				cursor: default;
 				&::after {
 					display: none;

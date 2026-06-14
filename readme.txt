@@ -1,4 +1,4 @@
-=== SEO FAQ Accordion & Schema Builder ===
+=== DV FAQ Schema Block ===
 Contributors: dvpatel
 Tags: faq, schema, seo, rich-results, gutenberg
 Requires at least: 5.8
@@ -52,3 +52,14 @@ Yes. The accordion inherits typography and colors directly from your theme so it
 
 = 1.0.0 =
 * Initial release. Features FAQ block, Accordion styling, and dynamic JSON-LD schema generation.
+
+== Source Code ==
+
+The source code for this plugin is included directly within the plugin's `src/` directory.
+
+To build the plugin assets (if you modify the source files):
+1. Navigate to the plugin directory in your terminal.
+2. Run `npm install` to install dependencies.
+3. Run `npm run build` to compile the JavaScript and CSS assets via `@wordpress/scripts`.
+
+All unminified source files can be found in the `src/` folder of the plugin zip.

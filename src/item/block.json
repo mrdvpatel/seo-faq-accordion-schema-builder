@@ -1,13 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "seo-faq-accordion-schema-builder/faq-item",
+  "name": "dv-faq-schema-block/faq-item",
   "version": "1.0.0",
   "title": "FAQ Item",
   "category": "widgets",
   "icon": "info",
   "description": "An individual Question & Answer pair for the FAQ block.",
-  "parent": ["seo-faq-accordion-schema-builder/faq"],
+  "parent": ["dv-faq-schema-block/faq"],
   "supports": {
     "html": false,
     "color": {
@@ -24,13 +24,13 @@
     "question": {
       "type": "string",
       "source": "html",
-      "selector": ".seo-faq-question-text"
+      "selector": ".dv-faq-question-text"
     },
     "answer": {
       "type": "string",
       "source": "html",
-      "selector": ".seo-faq-answer-text"
+      "selector": ".dv-faq-answer-text"
     }
   },
-  "textdomain": "seo-faq-accordion-schema-builder"
+  "textdomain": "dv-faq-schema-block"
 }

@@ -3,10 +3,10 @@ import { PanelBody, SelectControl, Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import './editor.scss';
 
-const ALLOWED_BLOCKS = [ 'seo-faq-accordion-schema-builder/faq-item' ];
+const ALLOWED_BLOCKS = [ 'dv-faq-schema-block/faq-item' ];
 const TEMPLATE = [
-	[ 'seo-faq-accordion-schema-builder/faq-item', {} ],
-	[ 'seo-faq-accordion-schema-builder/faq-item', {} ],
+	[ 'dv-faq-schema-block/faq-item', {} ],
+	[ 'dv-faq-schema-block/faq-item', {} ],
 ];
 
 /**
@@ -26,7 +26,7 @@ export default function Edit( { attributes, setAttributes } ) {
 	const { displayMode, expandIconUrl, collapseIconUrl } = attributes;
 
 	const blockProps = useBlockProps( {
-		className: `seo-faq-accordion-wrapper display-mode-${displayMode}`,
+		className: `dv-faq-accordion-wrapper display-mode-${displayMode}`,
 		style: {
 			'--faq-expand-icon': expandIconUrl ? `url(${expandIconUrl})` : undefined,
 			'--faq-collapse-icon': collapseIconUrl ? `url(${collapseIconUrl})` : undefined,
@@ -36,21 +36,21 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<div { ...blockProps }>
 			<InspectorControls>
-				<PanelBody title={ __( 'FAQ Settings', 'seo-faq-accordion-schema-builder' ) }>
+				<PanelBody title={ __( 'FAQ Settings', 'dv-faq-schema-block' ) }>
 					<SelectControl
-						label={ __( 'Display Mode', 'seo-faq-accordion-schema-builder' ) }
+						label={ __( 'Display Mode', 'dv-faq-schema-block' ) }
 						value={ displayMode }
 						options={ [
-							{ label: __( 'Accordion', 'seo-faq-accordion-schema-builder' ), value: 'accordion' },
-							{ label: __( 'Always Expanded', 'seo-faq-accordion-schema-builder' ), value: 'expanded' },
+							{ label: __( 'Accordion', 'dv-faq-schema-block' ), value: 'accordion' },
+							{ label: __( 'Always Expanded', 'dv-faq-schema-block' ), value: 'expanded' },
 						] }
 						onChange={ ( value ) => setAttributes( { displayMode: value } ) }
 					/>
 				</PanelBody>
 				{ displayMode === 'accordion' && (
-					<PanelBody title={ __( 'Icon Settings', 'seo-faq-accordion-schema-builder' ) } initialOpen={ false }>
-						<div className="seo-faq-icon-setting">
-							<p><strong>{ __( 'Expand Icon', 'seo-faq-accordion-schema-builder' ) }</strong></p>
+					<PanelBody title={ __( 'Icon Settings', 'dv-faq-schema-block' ) } initialOpen={ false }>
+						<div className="dv-faq-icon-setting">
+							<p><strong>{ __( 'Expand Icon', 'dv-faq-schema-block' ) }</strong></p>
 							<MediaUploadCheck>
 								<MediaUpload
 									onSelect={ ( media ) => setAttributes( { expandIconUrl: media.url } ) }
@@ -58,19 +58,19 @@ export default function Edit( { attributes, setAttributes } ) {
 									value={ expandIconUrl }
 									render={ ( { open } ) => (
 										<Button variant="secondary" onClick={ open }>
-											{ expandIconUrl ? __( 'Replace Image', 'seo-faq-accordion-schema-builder' ) : __( 'Upload Image', 'seo-faq-accordion-schema-builder' ) }
+											{ expandIconUrl ? __( 'Replace Image', 'dv-faq-schema-block' ) : __( 'Upload Image', 'dv-faq-schema-block' ) }
 										</Button>
 									) }
 								/>
 							</MediaUploadCheck>
 							{ expandIconUrl && (
 								<Button variant="link" isDestructive onClick={ () => setAttributes( { expandIconUrl: '' } ) }>
-									{ __( 'Remove', 'seo-faq-accordion-schema-builder' ) }
+									{ __( 'Remove', 'dv-faq-schema-block' ) }
 								</Button>
 							) }
 						</div>
-						<div className="seo-faq-icon-setting" style={{ marginTop: '1rem' }}>
-							<p><strong>{ __( 'Collapse Icon', 'seo-faq-accordion-schema-builder' ) }</strong></p>
+						<div className="dv-faq-icon-setting" style={{ marginTop: '1rem' }}>
+							<p><strong>{ __( 'Collapse Icon', 'dv-faq-schema-block' ) }</strong></p>
 							<MediaUploadCheck>
 								<MediaUpload
 									onSelect={ ( media ) => setAttributes( { collapseIconUrl: media.url } ) }
@@ -78,21 +78,21 @@ export default function Edit( { attributes, setAttributes } ) {
 									value={ collapseIconUrl }
 									render={ ( { open } ) => (
 										<Button variant="secondary" onClick={ open }>
-											{ collapseIconUrl ? __( 'Replace Image', 'seo-faq-accordion-schema-builder' ) : __( 'Upload Image', 'seo-faq-accordion-schema-builder' ) }
+											{ collapseIconUrl ? __( 'Replace Image', 'dv-faq-schema-block' ) : __( 'Upload Image', 'dv-faq-schema-block' ) }
 										</Button>
 									) }
 								/>
 							</MediaUploadCheck>
 							{ collapseIconUrl && (
 								<Button variant="link" isDestructive onClick={ () => setAttributes( { collapseIconUrl: '' } ) }>
-									{ __( 'Remove', 'seo-faq-accordion-schema-builder' ) }
+									{ __( 'Remove', 'dv-faq-schema-block' ) }
 								</Button>
 							) }
 						</div>
 					</PanelBody>
 				) }
 			</InspectorControls>
-			<div className={`seo-faq-accordion-wrapper display-mode-${ displayMode }`}>
+			<div className={`dv-faq-accordion-wrapper display-mode-${ displayMode }`}>
 				<InnerBlocks
 					allowedBlocks={ ALLOWED_BLOCKS }
 					template={ TEMPLATE }
